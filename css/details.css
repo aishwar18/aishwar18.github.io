@@ -27,19 +27,22 @@
   cursor: pointer;
 }
 
-.searchbutton .fas{
+.searchbutton .fas {
   position: absolute;
   top: 50%;
   left: 94%;
   transform:translate(-50%,-50%);
 }
 
-
+.input
+{
+    padding-left:50px;
+}
 .reg-box
 {
   position: relative;
   background-color: ivory;
-  width:450px;
+  width:600px;
   margin-left: 35%;
   margin-top: 7%;  
 }
