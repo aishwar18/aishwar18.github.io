@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Government Officials Registration</title>
+    <link rel="icon" type="image/jpg" href="../images/logo.PNG">
+      
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+      
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+      
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+      
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/04a54148ef.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/register.css" />
+      
+    <!--JS-->
+    <script src="../js/cities.js"></script>
+      
+      
+<script>
+function login() {
+  window.open("login.html","_self");
+}
+</script>  
+      
+  </head>
+    
+    
+  <body>
+      <div class="container-fluid">
+      <!-- Nav Bar -->
+
+      <navbar class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand nav-bar-text" href="#">Government Officials Registration</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ml-auto">
+            <!--<li class="nav-item">
+              <a class="nav-link nav-bar-text" href="#register_birth">Birth Certificate Registration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-bar-text" href="#register_death">Death Certificate Registration</a>
+            </li>-->
+            </ul>
+        </div>
+      </navbar>
+    </div>
+    
+    <section id="register_birth">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col col-lg-12">
+              <div class="reg-box" id="reg-box">
+                <div class="reg-form" id="reg-form">
+                  <!--<img src="../images/govn.png" width="300px" height="200px"><br>-->
+                  <h3 text align="center">Government Officials Registration</h3><br>
+                  <form>
+                      
+                      <div class="form-group">
+                          <label for="first_name">First Name</label>
+                          <input type="text" class="form-control" id="first_name" placeholder="Enter the first name">     
+                      </div>
+
+                      <div class="form-group">
+                          <label for="last_name">Last Name</label>
+                          <input type="text" class="form-control" id="last_name" placeholder="Enter the last name">     
+                      </div>
+
+                     <div class="form-group">
+                        <label for="birth_gender">Gender</label><br>
+                          <input type="radio" id="male" name="birth_gender" value="male">
+                          <label for="male">Male</label><br>
+                          <input type="radio" id="female" name="birth_gender" value="female">
+                          <label for="female">Female</label><br>
+                          <input type="radio" id="other" name="birth_gender" value="other">
+                          <label for="other">Other</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Designation">Designation</label><br>
+                        <select class="form-control" id="Designation" name="Designation">
+                                <option value="Inspector">Inspector</option>
+                                <option value="Deputy-Inspector</">Deputy-Inspector</option>
+                                <option value="Surveyor">Surveyor</option>
+                                <option value="Deputy-Surveyor">Deputy-Surveyor</option>
+                        </select>
+                    </div> 
+                      
+
+                  <div class="form-group">
+                      <label for="address">Office Address</label><br>
+                      <textarea rows="4" cols="50" name="address" form="usrform" placeholder="Enter local address here"></textarea>
+                  </div>
+                 
+                  <div class="form-group">
+                        <label for="sc">Select State and City</label><br>
+                            <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
+                             <select id ="state" class="form-control" required name="sc"></select>
+                             <script language="javascript">print_state("sts");</script>
+                  </div>
+                      
+                  <div class="form-group">
+                     <label for="aadhaar">Aadhaar Number</label><br>
+                     <input type="text" class="form-control" id="aadhaar" placeholder="Enter the aadhar no">
+                  </div>
+                  
+                 <div class="form-group">
+                     <label for="Mobile">Mobile</label><br>
+                     <input type="text" class="form-control" id="mobile" placeholder="Enter the mobile no">
+                 </div>
+                 
+                 <div class="form-group">
+                     <label for="email">Email</label><br>
+                     <input type="text" class="form-control" id="email" placeholder="Enter the email">
+                 </div>
+                 
+               <div class="form-group">
+                     <label for="email">Password</label><br>
+                     <input type="password" class="form-control" id="email" placeholder="Enter the email">
+                 </div>
+                      
+               <div class="form-group">
+                     <label for="email">Confirm Password</label><br>
+                     <input type="password" class="form-control" id="email" placeholder="Enter the email">
+                 </div>
+                      
+                  <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">I agree to terms and conditions</label>
+                  </div>
+                  <button type="submit" onclick="login()" class="btn btn-primary">Sign up</button>
+                  <button type="reset" class="btn btn-primary" id="birth_reset_button">Reset</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+      
+  </body>
+</html>

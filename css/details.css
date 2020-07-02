@@ -1,0 +1,56 @@
+
+.wrapper{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background: rgba(0,0,0,0.6);
+  max-width:550px;
+  width:100%;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper input{
+  width:87%;
+  padding: 5px 5px;
+  border:none;
+  border-radius:5px;
+  font-weight:bold;
+  justify-content: space-between;
+}
+.searchbutton{
+  background: #ffec00;
+  width: 10%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.searchbutton .fas{
+  position: absolute;
+  top: 50%;
+  left: 94%;
+  transform:translate(-50%,-50%);
+}
+
+
+.reg-box
+{
+  position: relative;
+  background-color: ivory;
+  width:450px;
+  margin-left: 35%;
+  margin-top: 7%;  
+}
+
+.reg-form
+{
+  display: inline-grid;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-left: 10%;
+  margin-right: 10%
+
+}
+
