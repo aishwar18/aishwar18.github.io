@@ -47,7 +47,7 @@
     <link rel="stylesheet" href="../css/details.css" />
       
     <!--JS-->
-    <script src="js/cities.js"></script>
+    <script src="../js/cities.js"></script>
       
   </head>
     
@@ -72,7 +72,7 @@
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <div class="wrapper">
-        <input class="searchtext" style="font-size:12px;" type="text" placeholder="search the place using the coordinates" name="search">
+        <input class="searchtext" style="font-size:12px;" type="text" placeholder="search here.." name="search">
         <div class="searchbutton">
           <i class="fas fa-search"></i>
         </div>
@@ -88,20 +88,38 @@
         </div>
       </navbar>
     </div>
+      
+      
+ 
+      
       <section id="map">
-                  <div class="container-fluid">
-          <div class="row">
-            <div class="col col-lg-12">
-              <div class="reg-box" id="reg-box">
-                <div class="reg-form" id="reg-form">
-                    
-                  <form >
+
+<div class="container" style="padding-top:85px;">
+   
+  <div class="row">
+    <div class="col-sm-3" style="background-color:#41B3A3;">
+                    <label style="padding-left:50px" for="dob">Select the Start Date</label>
+                                <input style="padding-left:80px" type="date" id="dob" placeholder="Enter the start date">    
+    </div>
+    <div class="col-sm-3" style="background-color:#E27D60;">
+                    <label style="padding-left:50px"  for="dob">Select the end Date</label>
+                                <input style="padding-left:80px" type="date" id="dob" placeholder="Enter end date">   
+    </div>
+          <div class="col-sm-3" style="background-color:#41B3A3;">
+               <label style="padding-left:50px" for="dob">Top left coordinates</label>
+                        <input style="padding-left:80px"  type="text"  id="dob" >   
+    </div>
+          <div class="col-sm-3" style="background-color:#E27D60;">
+                <label style="padding-left:50px"  for="dob">Botton right coordinates</label>
+                        <input style="padding-left:80px"  type="text"  id="dob">  
+    </div>
+  </div>
+</div>
           
-                              <div class="form-group">
-                        <label for="dob">Select the Date</label>
-                        <input type="date" class="form-control" id="dob" placeholder="Enter the date of birth">     
-                    </div></form></div></div></div></div></div>
-			<img src="../images/map.jpg" width="1300px" height="550px" style="padding-left:200px;">
+<iframe style="padding-top:25px;padding-left:100px;" width="1450px" height="600px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=india+(land)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+          
+<!--<iframe style="padding-top:50px;padding-left:100px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125323.47388556042!2d76.89719440091439!3d11.011701573401115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1593325174853!5m2!1sen!2sin" width="1400" height="550" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>-->    
+          <!--<img src="../images/map.jpg" width="1400px" height="550px" style="padding-left:200px;padding-top:50px;">-->
       </section>
       
       <section id="details">
@@ -113,12 +131,6 @@
                   <h3 text align="center">Place Details</h3><br>
                     
                   <form >
-                      
-                      
-                      <div class="form-group">
-                          <label for="owner_details">Owner Name :</label>
-                          <p id="owner_details">...</p>    
-                      </div>
                       
                       <div class="form-group">
                           <label for="size">Size :</label>
@@ -144,16 +156,7 @@
                         <label for="state">State :</label><br>
                         <p id="state">...</p>
                     </div> 
-                       
-                      <div class="form-group">
-                        <label for="year">Year in which the land is bought:</label><br>
-                        <p id="year">...</p>
-                    </div> 
-                      
-                    <div class="form-group">
-                        <label for="previous_owner">Previous Owner :</label><br>
-                        <p id="previous_owner">...</p>
-                    </div>                      
+                               
 
                     <div class="form-group">
                         <label for="previous_type">Previous Type :</label><br>
